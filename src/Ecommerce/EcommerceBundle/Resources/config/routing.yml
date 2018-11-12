@@ -1,0 +1,14 @@
+ecommerce_homepage:
+    pattern:     /
+    defaults: { _controller: EcommerceBundle:Default:index }
+
+ecommerce_first:
+    pattern: /{id}/first.{_format}
+    defaults: { _controller: EcommerceBundle:Default:firstTest, _format: html}
+    requirements:
+      _format : html
+      id: \d+
+
+ecommerce_second:
+    pattern: /second
+    defaults: { _controller: EcommerceBundle:Default:secondTest}
